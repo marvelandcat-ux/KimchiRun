@@ -705,7 +705,7 @@ Transform:
   m_GameObject: {fileID: 978000269}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.0032713097, z: -0, w: 0.9999947}
-  m_LocalPosition: {x: -8.05, y: -3.63, z: 0.05}
+  m_LocalPosition: {x: -7.7, y: -3.27, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -725,7 +725,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 1
   m_GravityScale: 1.3
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -797,8 +797,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   jumpForce: 5
-  fallMultiplier: 2.5
-  dashTimeScale: 2
 --- !u!1 &1050148762
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,8 +883,8 @@ Transform:
   m_GameObject: {fileID: 1050148762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: -4.26, z: 80}
-  m_LocalScale: {x: 19.662233, y: 1.5465226, z: 1}
+  m_LocalPosition: {x: 0.23, y: -4.1915, z: 80}
+  m_LocalScale: {x: 19.662233, y: 1.6835446, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
