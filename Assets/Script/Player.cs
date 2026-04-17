@@ -4,9 +4,25 @@ public class Player : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D rigid; // 물리 효과를 주기 위한 변수
-    
+
+
     public float jumpForce = 6f; // 점프하는 힘 (Unity 인스펙터에서 수정 가능)
-    bool isJumping = false; // 현재 점프 중인지 확인하는 변수(Variable)
+    bool isJumping = false;
+    public int lives = 3;
+    private BoxCollider2D collider2D;
+    public bool isInvincible = false;
+
+
+
+    private void Awake()
+    {
+        rigid = GetComponent<Rigidbody2D>();
+        collider2D = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
+
+    }
+
+    // 현재 점프 중인지 확인하는 변수(Variable)
 
     void Start()
     {
@@ -21,8 +37,9 @@ public class Player : MonoBehaviour
         {
             isJumping = true; // 점프 중이라고 표시
             animator.SetInteger("state", 1); // 애니메이션을 1(점프)로 변경
-            
+
             // 위로 솟아오르는 물리적인 힘을 가합니다.
+
             rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
@@ -31,9 +48,72 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // 바닥 등에 닿아서 착지하면 다시 점프가 가능하도록 false로 변경
-        isJumping = false; 
-        
+        isJumping = false;
+
         // 애니메이션을 2(착지/대기)로 변경
+
         animator.SetInteger("state", 2);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log(collision.gameObject.name + "와/과 부딫힘!");
+            Destroy(collision.gameObject);
+            if (!isInvincible)
+            {
+                Damage();
+            }
+
+        }
+        else if (collision.gameObject.CompareTag("Food"))
+        {
+            Debug.Log(collision.gameObject.name + "를 먹었다!");
+            Destroy(collision.gameObject);
+            Heal();
+
+        }
+        else if (collision.gameObject.CompareTag("Gold"))
+        {
+            Debug.Log("Don't forget I'm Invincible");
+            Destroy(collision.gameObject);
+            StartInvincible();
+
+        }
+    }
+
+    private void Heal()
+    {
+        lives = Mathf.Min(lives + 1, 3);
+        Debug.Log("Player lives:" + lives);
+    }
+    private void Damage()
+    {
+        lives = Mathf.Max(lives - 1, 0);
+        if (lives <= 0)
+        {
+            KillPlayer();
+            Debug.Log("Game Over");
+        }
+        Debug.Log("Player lives:" + lives);
+    }
+    private void StartInvincible()
+    {
+        isInvincible = true;
+        Invoke("StopInvincible", 5f);
+    }
+    private void StopInvincible()
+    {
+        isInvincible = false;
+    }
+    private void KillPlayer()
+    {
+        collider2D.enabled = false;
+        animator.enabled = false;
+        rigid.AddForceY(5f, ForceMode2D.Impulse);
+
+    }
 }
+
+
+
