@@ -276,6 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92da1c5476a6754b9ca33e9ec2ea5c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  Lives: 3
+  player: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!114 &368800148
 MonoBehaviour:
   m_ObjectHideFlags: 0
