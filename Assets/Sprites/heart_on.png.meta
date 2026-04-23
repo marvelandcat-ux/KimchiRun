@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4908ed26705aef5418b02246f1f613dc
+guid: e868e9b4315dccc45868eb5482fdf65b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3054613455101831404
-    second: heart_off_0
+      213: -5190086840121592426
+    second: heart_on_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heart_off_0
+      name: heart_on_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce8297dd0ca246a20800000000000000
-      internalID: 3054613455101831404
+      spriteID: 6957f15648b19f7b0800000000000000
+      internalID: -5190086840121592426
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      heart_off_0: 3054613455101831404
+      heart_on_0: -5190086840121592426
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

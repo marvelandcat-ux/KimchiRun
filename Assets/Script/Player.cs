@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     public float jumpForce = 6f; // 점프하는 힘 (Unity 인스펙터에서 수정 가능)
     bool isJumping = false;
-    public int lives = 3;
+    //public int lives = 3;
     private BoxCollider2D collider2D;
     public bool isInvincible = false;
 
@@ -84,18 +84,18 @@ public class Player : MonoBehaviour
 
     private void Heal()
     {
-        lives = Mathf.Min(lives + 1, 3);
-        Debug.Log("Player lives:" + lives);
+        GameManager.instance.AddLiveHasLimit();
     }
     private void Damage()
     {
-        lives = Mathf.Max(lives - 1, 0);
-        if (lives <= 0)
+        GameManager.instance.lives--;
+        if (GameManager.instance.lives <= 0)
         {
             KillPlayer();
             Debug.Log("Game Over");
         }
-        Debug.Log("Player lives:" + lives);
+        Debug.Log("Player lives:" + GameManager.instance.lives);
+
     }
     private void StartInvincible()
     {

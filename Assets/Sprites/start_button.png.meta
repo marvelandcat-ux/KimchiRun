@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e868e9b4315dccc45868eb5482fdf65b
+guid: 53f945680355a32439e8e557a992d74a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5190086840121592426
-    second: heart_on_0
+      213: -3500759553075992606
+    second: start_button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heart_on_0
+      name: start_button_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 14
+        width: 108
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6957f15648b19f7b0800000000000000
-      internalID: -5190086840121592426
+      spriteID: 2e7a9dafbbdca6fc0800000000000000
+      internalID: -3500759553075992606
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      heart_on_0: -5190086840121592426
+      start_button_0: -3500759553075992606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

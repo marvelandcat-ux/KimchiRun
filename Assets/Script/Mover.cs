@@ -7,7 +7,7 @@ public class Mover : MonoBehaviour
 
     void Update()
     {
-        // speed 변수에 비례하여 부드럽게 이동하도록 수정
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        float moveSpeed = GameManager.instance.CalculateGameSpeed();
+        transform.position += Vector3.left * moveSpeed * Time.deltaTime;
     }
 }
